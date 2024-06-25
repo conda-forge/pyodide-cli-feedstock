@@ -10,16 +10,17 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - pyodide = pyodide_cli.__main__:main
 
 requirements:
   host:
+    - hatch-vcs
+    - hatchling
     - pip
     - python >=3.10
-    - setuptools_scm >=6.2
   run:
     - python >=3.10
     - rich
