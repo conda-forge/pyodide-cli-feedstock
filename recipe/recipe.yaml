@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 0.3.0
+
+package:
+  name: pyodide-cli
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/pyodide-cli/pyodide_cli-${{ version }}.tar.gz
+  sha256: 247a7408f358326dd586477b5fe6eeb146edbed5f058923d258730e743457dd0
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - pyodide = pyodide_cli.__main__:main
+
+requirements:
+  host:
+    - hatch-vcs
+    - hatchling
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - rich
+    - typer >=0.6.0
+
+tests:
+  - python:
+      imports: pyodide_cli
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - pyodide --version
+      - pyodide --help
+
+about:
+  summary: The command line interface for the Pyodide project
+  license: MPL-2.0
+  license_file: LICENSE
+  homepage: https://github.com/pyodide/pyodide-cli
+
+extra:
+  recipe-maintainers:
+    - bollwyvl
