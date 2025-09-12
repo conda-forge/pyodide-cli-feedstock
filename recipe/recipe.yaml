@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.3.0
+  version: "0.4.0"
 
 package:
   name: pyodide-cli
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-cli/pyodide_cli-${{ version }}.tar.gz
-  sha256: 247a7408f358326dd586477b5fe6eeb146edbed5f058923d258730e743457dd0
+  sha256: 828e0b73cbd810414a61253cf0f0746a2efc8434567c57fbb03308b6d955e958
 
 build:
   number: 0
