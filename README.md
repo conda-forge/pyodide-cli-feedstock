@@ -3,11 +3,15 @@ About pyodide-cli-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyodide-cli-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/pyodide/pyodide-cli
+Home: https://pypi.org/project/pyodide-cli
 
 Package license: MPL-2.0
 
 Summary: The command line interface for the Pyodide project
+
+Development: https://github.com/pyodide/pyodide-cli
+
+Documentation: https://pyodide.org/
 
 Current build status
 ====================
