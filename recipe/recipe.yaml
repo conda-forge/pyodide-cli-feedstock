@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-cli/pyodide_cli-${{ version }}.tar.gz
-  sha256: 3bb5c1fd5cb4af47b6ad09bf900b987dc9d7bea9bcf49d20501a0b0f1436e262
+  sha256: 8e6421f17b570fa5402254bc8bed6d032ac06ab5e1e83087ed8517d87bc86abc
 
 build:
   number: 0
