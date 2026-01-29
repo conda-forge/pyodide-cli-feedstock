@@ -30,9 +30,9 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
+    - click
     - python >=${{ python_min }}
     - rich
-    - typer >=0.6.0
 
 tests:
   - python:
