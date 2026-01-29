@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.4.2"
+  version: "0.5.0"
   python_min: "3.12"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-cli/pyodide_cli-${{ version }}.tar.gz
-  sha256: 8e6421f17b570fa5402254bc8bed6d032ac06ab5e1e83087ed8517d87bc86abc
+  sha256: 14df0797e791558b6976d4612f9df9619334f8914bfe3efbdd22e3886f5275b7
 
 build:
   number: 0
@@ -30,9 +30,9 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
+    - click
     - python >=${{ python_min }}
     - rich
-    - typer >=0.6.0
 
 tests:
   - python:
